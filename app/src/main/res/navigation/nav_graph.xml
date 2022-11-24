@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/pokedexListFragment">
+
+    <fragment
+        android:id="@+id/pokedexListFragment"
+        android:name="com.example.finalproject.ui.PokedexListFragment"
+        android:label="fragment_pokedex_list"
+        tools:layout="@layout/fragment_pokedex_list" />
+    <fragment
+        android:id="@+id/pokedexFavoriteFragment"
+        android:name="com.example.finalproject.PokedexFavoriteFragment"
+        android:label="fragment_pokedex_favorite"
+        tools:layout="@layout/fragment_pokedex_favorite" />
+    <fragment
+        android:id="@+id/pokedexDetailFragment"
+        android:name="com.example.finalproject.PokedexDetailFragment"
+        android:label="fragment_pokedex_list"
+        tools:layout="@layout/fragment_pokedex_detail" >
+        <argument
+            android:name="navArgs"
+            app:argType="com.example.finalproject.model.Pokedex" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_pokedexDetail"
+        app:destination="@id/pokedexDetailFragment" />
+
+
+</navigation>
